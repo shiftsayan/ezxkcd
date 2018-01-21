@@ -1,0 +1,28 @@
+{
+	"name":"ezxkcd",
+	"description":"Chrome extension to combat sadness through doses of humour",
+	"version":"1.0",
+
+	"manifest_version":2,
+
+	"browser_action":{
+		"default_icon":"icon.png",
+		"default_popup":"popup.html"
+	},
+
+	"permissions":[
+		"tabs",
+		"storage",
+		"activeTab"
+	],
+
+	"content_scripts":[
+		{
+			"matches":["https://messenger.com/*"],
+			"js":["script.js"],
+			"css":["style.css"]
+		}
+	],
+
+	"content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
