@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+*.pyc
+tests/
+jupyter/messages.txt
+jupyter/.ipynb_checkpoints
